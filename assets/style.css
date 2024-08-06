@@ -6,7 +6,12 @@ body {
 	font-family: 'Inter';
 	font-style: normal;
 }
-.top-header {
+
+h1, h2{
+	font-size: calc(1.3rem + 0.6vw);
+}
+
+header {
 	background-color: white;
 	position: sticky;
 	top:0;
@@ -18,22 +23,22 @@ body {
 	align-items: center;
 }
 
-.top-header .name {
+header .name {
 	font-size: 26px;
 }
 
-.nav ul {
+nav ul {
 	display: flex;
 	list-style-type: none;
 	font-size: 14px;
 	margin-bottom: 0;
 }
 
-.nav li {
+nav li {
 	padding-inline: 10px;
 }
 
-.nav a {
+nav a {
 	text-decoration: none;
 	color: #000
 }
@@ -190,7 +195,7 @@ body {
 	z-index: 1;
 }
 
-#contact {
+footer {
 	margin: auto;
 	background-color: #D8D3A8 ;
 	position: relative;
@@ -198,7 +203,7 @@ body {
 	padding-block: 100px;
 }
 
-#contact .container {
+footer .container {
 	display: flex;
 }
 .picture.right::before {
@@ -255,7 +260,7 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me h2, #about-me p {
 		width: 100%;
 	}
 }
