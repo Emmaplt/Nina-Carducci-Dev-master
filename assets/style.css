@@ -2,6 +2,13 @@ body {
 	max-width: 1920px;
 	margin: auto;
 }
+@font-face {
+    font-family: 'Inter';
+    src: url('path-to-your-font/inter.woff2') format('woff2'),
+         url('path-to-your-font/inter.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
 * {
 	font-family: 'Inter';
 	font-style: normal;
@@ -124,8 +131,8 @@ nav a {
 }
 .gallery-item {
 	position: absolute;
-	width: 100%;
-	height: 100%;
+	width: 424px;
+	height: 408px;
 	object-fit: cover;
 	padding: .5em;
 }
