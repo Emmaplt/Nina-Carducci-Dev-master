@@ -17,7 +17,6 @@ body {
 h1, h2{
 	font-size: calc(1.3rem + 0.6vw);
 }
-
 header {
 	background-color: white;
 	position: sticky;
@@ -54,7 +53,10 @@ nav a {
 	width: 20px;
 	height: 20px;
 }
-
+.d-block{
+	max-width: 1920px;
+	max-height: 888px;
+}
 #about {
 	display: flex;
 	background-color: #F6D2B8;
@@ -73,16 +75,15 @@ nav a {
 	left: 0;
 	z-index: -1;
 }
+.picture.left img{
+	max-width: 469px;
+	max-height: 470px;
+}
 
 .picture {
 	flex: 1;
 	margin: 0 20px;
 	z-index: 0;
-}
-
-.picture img {
-	max-width: 469px;
-	max-height: 470px;
 }
 #about-me {
 	flex: 2
@@ -220,6 +221,10 @@ footer .container {
 	bottom: 0;
 	right: 0;
 	z-index: -1;
+}
+.picture.right img{
+	max-width: 469px;
+	max-height: 470px;
 }
 .form-container {
 	flex : 2;
