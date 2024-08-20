@@ -46,10 +46,7 @@ nav a {
 	width: 20px;
 	height: 20px;
 }
-.d-block{
-	max-width: 1920px;
-	max-height: 888px;
-}
+
 #about {
 	display: flex;
 	background-color: #F6D2B8;
