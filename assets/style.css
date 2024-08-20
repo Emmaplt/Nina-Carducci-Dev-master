@@ -2,13 +2,6 @@ body {
 	max-width: 1920px;
 	margin: auto;
 }
-@font-face {
-    font-family: 'Inter';
-    src: url('path-to-your-font/inter.woff2') format('woff2'),
-         url('path-to-your-font/inter.woff') format('woff');
-    font-style: normal;
-    font-display: swap;
-}
 * {
 	font-family: 'Inter';
 	font-style: normal;
@@ -75,11 +68,6 @@ nav a {
 	left: 0;
 	z-index: -1;
 }
-.picture.left img{
-	max-width: 469px;
-	max-height: 470px;
-}
-
 .picture {
 	flex: 1;
 	margin: 0 20px;
