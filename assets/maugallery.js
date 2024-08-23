@@ -145,56 +145,56 @@
           }
         });
       }
-      let index = 0,
-        next = null;
-
+      let index = -1;
       $(imagesCollection).each(function(i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
-        }
+          if ($(activeImage).attr("src") === $(this).attr("src")) {
+              index = i;
+          }
       });
-      next =
-        imagesCollection[index] ||
-        imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
-    },
+      if (index > 0) {
+          index--;
+      } else {
+          index = imagesCollection.length - 1;
+      }
+      let prev = imagesCollection[index];
+      $(".lightboxImage").attr("src", $(prev).attr("src"));
+  },
     nextImage() {
       let activeImage = null;
       $("img.gallery-item").each(function() {
-        if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
-          activeImage = $(this);
-        }
+          if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
+              activeImage = $(this);
+          }
       });
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
       let imagesCollection = [];
       if (activeTag === "all") {
-        $(".item-column").each(function() {
-          if ($(this).children("img").length) {
-            imagesCollection.push($(this).children("img"));
-          }
-        });
+          $(".item-column").each(function() {
+              if ($(this).children("img").length) {
+                  imagesCollection.push($(this).children("img"));
+              }
+          });
       } else {
-        $(".item-column").each(function() {
-          if (
-            $(this)
-              .children("img")
-              .data("gallery-tag") === activeTag
-          ) {
-            imagesCollection.push($(this).children("img"));
-          }
-        });
+          $(".item-column").each(function() {
+              if ($(this).children("img").data("gallery-tag") === activeTag) {
+                  imagesCollection.push($(this).children("img"));
+              }
+          });
       }
-      let index = 0,
-        next = null;
-
+      let index = -1;
       $(imagesCollection).each(function(i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
-        }
+          if ($(activeImage).attr("src") === $(this).attr("src")) {
+              index = i;
+          }
       });
-      next = imagesCollection[index] || imagesCollection[0];
+      if (index < imagesCollection.length - 1) {
+          index++;
+      } else {
+          index = 0;
+      }
+      let next = imagesCollection[index];
       $(".lightboxImage").attr("src", $(next).attr("src"));
-    },
+  },
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
         lightboxId ? lightboxId : "galleryLightbox"
