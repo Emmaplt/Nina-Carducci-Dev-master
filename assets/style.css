@@ -55,6 +55,10 @@ nav a {
 	position: relative;
 }
 
+.visually-hidden{
+	visibility: hidden;
+}
+
 .picture.left::before {
 	content: ' ';
 	background-color: #E5975F;
